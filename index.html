@@ -762,63 +762,37 @@
         <div class="contact-content">
            
             <!-- Блок формы -->
-<div class="contact-form-container">
-    <form class="contact-form" id="feedbackForm">
-        <div class="form-group">
-            <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
-            <label for="name" class="form-label">Ваше имя</label>
-        </div>
-        
-        <div class="form-group">
-            <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
-            <label for="email" class="form-label">Ваш email</label>
-        </div>
-        
-        <div class="form-group">
-            <textarea id="message" name="message" class="form-input form-textarea" placeholder=" " rows="5" required></textarea>
-            <label for="message" class="form-label">Ваше сообщение</label>
-        </div>
-        
-        <button type="submit" class="btn btn-primary contact-btn">
-            <span>Отправить сообщение</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
+            <div class="contact-form-container">
+                <form class="contact-form" id="feedbackForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                        <label for="name" class="form-label">Ваше имя</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+                        <label for="email" class="form-label">Ваш email</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="form-input form-textarea" placeholder=" " rows="5" required></textarea>
+                        <label for="message" class="form-label">Ваше сообщение</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary contact-btn">
+                        <span>Отправить сообщение</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
 
-        <!-- Этот div добавить в конец формы -->
-        <div id="form-message" style="display: none; margin-top: 15px; padding: 10px; border-radius: 5px; text-align: center;"></div>
-    </form>
-</div>
+                    <div id="form-message" style="display: none; margin-top: 15px; padding: 10px; border-radius: 5px; text-align: center;"></div>
+                </form>
+            </div>
             
-            <!-- Блок контактов -->
-            <div class="contact-info">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Локация</h3>
-                        <p>Минск, Беларусь</p>
-                    </div>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Почта</h3>
-                        <p id="email-text">dt656503@gmail.com</p>
-                    </div>
-                </div>
-                
+            <!-- Блок контактов - вертикально друг под другом -->
+            <div class="contact-info-vertical">
+                <!-- Социальные сети -->
                 <div class="social-contact">
                     <h3>Социальные сети</h3>
                     <div class="social-contact-links">
@@ -844,11 +818,71 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Почта -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Почта</h3>
+                        <p id="email-text">dt656503@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Telegram -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.192l-1.762 8.4c-.125.565-.458.7-.93.437l-2.57-1.895-1.233 1.21c-.136.136-.25.25-.512.25l.183-2.873 4.762-4.33c.208-.188-.045-.29-.322-.1l-5.89 3.79-2.535-.79c-.552-.175-.562-.55.117-.82l9.87-3.79c.458-.175.86.128.71.82z" 
+                                  stroke="currentColor" 
+                                  stroke-width="0.5" 
+                                  fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Telegram</h3>
+                        <p><a href="https://t.me/TDashaT65" target="_blank" style="color: inherit; text-decoration: none;">@TDashaT65</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Локация с картой - растянута на всю ширину -->
+        <div class="location-section">
+            <div class="location-card">
+                <div class="location-header">
+                    <div class="location-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="location-info">
+                        <h3>Локация</h3>
+                        <p>Минск, Беларусь</p>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <!-- Карта с темной темой -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11776.03649271223!2d27.56168416977538!3d53.90254199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfd35b1e6ad3%3A0xb61b853ddb570d9!2z0JzQuNC90YHQug!5e0!3m2!1sru!2sby!4v1700000000000!5m2!1sru!2sby"
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius: 15px; filter: invert(90%) hue-rotate(180deg) contrast(85%);" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </div>
     </div>
 
- <!-- Активатор -->
+    <!-- Активатор -->
     <div class="activator-container">
         <div class="activator" onclick="activateRobot('robot-contact')">
             <div class="activator-emoji">🎂</div>
@@ -1044,6 +1078,8 @@ function initContactForm() {
 // ИЛИ если форма загружается динамически, добавьте:
 setTimeout(initContactForm, 1000);
 </script>
+
+
 
 
 </html>
