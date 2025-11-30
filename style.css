@@ -1394,6 +1394,9 @@ body {
 }
 
 /* Футер */
+
+
+
 .footer {
     background: var(--black-light);
     border-top: 1px solid var(--gray-dark);
@@ -1463,16 +1466,17 @@ body {
     border-radius: 10px;
     color: var(--gray);
     text-decoration: none;
-    transition: var(--transition);
+  /*  transition: var(--transition);*/
 }
 
 .social-link:hover {
     color: var(--white);
     border-color: var(--purple);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-glow);
+  /*  transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);*/
 }
 
+/* Навигация и ссылки */
 /* Навигация и ссылки */
 .footer-title {
     color: var(--white);
@@ -1491,13 +1495,13 @@ body {
 .footer-links a {
     color: var(--gray);
     text-decoration: none;
-    transition: var(--transition);
+    transition: color 0.3s ease; /* Оставляем только переход цвета */
     font-size: 0.9rem;
 }
 
 .footer-links a:hover {
     color: var(--white);
-    padding-left: 5px;
+    /* УБРАТЬ padding-left: 5px; - это то что двигает ссылки */
 }
 
 /* Нижняя часть футера */
@@ -1514,11 +1518,11 @@ body {
     color: var(--gray);
     font-size: 0.9rem;
 }
-
+/*
 .heart {
     color: #ff6b6b;
     animation: heartbeat 2s infinite;
-}
+}*/
 
 @keyframes heartbeat {
     0%, 100% { transform: scale(1); }
@@ -1868,7 +1872,15 @@ body {
 /* Для контактов */
 #contact .robot-gigachat {
     --robot-pos-x: 5%;
-    --robot-pos-y: 70%;
+    --robot-pos-y: 30%;
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 1024px) {
+    #contact .robot-gigachat {
+        --robot-pos-x: 15%;
+        --robot-pos-y: 35%;
+    }
 }
 
 .robot-gigachat {
@@ -2406,5 +2418,101 @@ body.menu-open {
     #achievements .robot-gigachat {
         top: 80px !important;     /* Как в других секциях */
         right: 10px !important;   /* Как в других секциях */
+    }
+}
+
+/* Стили для вертикального расположения контактов */
+.contact-info-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+}
+
+/* Увеличиваем отступы между элементами */
+.social-contact {
+    margin-bottom: 0.5rem;
+}
+
+.contact-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--black-light);
+    border: 1px solid var(--gray-dark);
+    border-radius: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-card:hover {
+    border-color: var(--purple);
+}
+
+/* Стили для секции локации */
+.location-section {
+    grid-column: 1 / -1;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.location-card {
+    background: var(--black-light);
+    border: 1px solid var(--gray-dark);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+}
+
+.location-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.location-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 12px;
+    color: var(--purple);
+    flex-shrink: 0;
+}
+
+.location-info h3 {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.location-info p {
+    color: var(--gray);
+    margin: 0;
+}
+
+.location-map {
+    width: 100%;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .contact-info-vertical {
+        gap: 1.5rem;
+    }
+    
+    .location-section {
+        margin-top: 2rem;
+    }
+    
+    .location-card {
+        padding: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 1.25rem;
     }
 }
